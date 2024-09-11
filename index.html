@@ -1,0 +1,38 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Calculator</title>
+    </head>
+    <body>
+        <div id="calc">
+            <div id="bar">
+                <input type="text" id="bar-content">
+            </div>
+            <button onclick="insertNumber('0')" class="number" id="zero">0</button>
+            <button onclick="insertNumber('1')" class="number" id="one">1</button>
+            <button onclick="insertNumber('2')" class="number" id="two">2</button>
+            <button onclick="insertNumber('3')" class="number" id="three">3</button>
+            <button onclick="insertNumber('4')" class="number" id="four">4</button>
+            <button onclick="insertNumber('5')" class="number" id="five">5</button>
+            <button onclick="insertNumber('6')" class="number" id="six">6</button>
+            <button onclick="insertNumber('7')" class="number" id="seven">7</button>
+            <button onclick="insertNumber('8')" class="number" id="eight">8</button>
+            <button onclick="insertNumber('9')" class="number" id="nine">9</button>
+
+            <button onclick="insertOperator('/')" class="operator" id="divide">/</button>
+            <button onclick="insertOperator('*')" class="operator" id="multiply">*</button>
+            <button onclick="insertOperator('-')" class="operator" id="substract">-</button>
+            <button onclick="insertOperator('+')" class="operator" id="add">+</button>
+
+            <button onclick="insertOperator('.')" class="operator" id="dot">.</button>
+            <button onclick="insertOperator('=')" class="operator" id="equal">=</button>
+            <button onclick="insertOperator('C')" class="operator" id="clear">C</button>
+            <button onclick="insertOperator('CE')" class="operator" id="clearEntry">CE</button>
+            <button onclick="insertOperator('+/-')" class="operator" id="invertSign">+/-</button>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
