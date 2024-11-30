@@ -1,151 +1,140 @@
-*{
-    margin: 0;
-    padding: 0;
+:root {
+	--primary-color: rgb(80, 197, 230);
+	--secondary-color: rgb(26, 26, 26);
+	--tertiary-color: rgb(230, 230, 230);
+	--quaternary-color: rgb(172, 172, 172);
+	--quinary-color: rgb(181, 211, 247);
+	--focus-color: rgb(181, 211, 247);
 }
 
-body{
-    background-color: rgb(30, 144, 172);
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-#calc{
-    position: absolute;
-    left: 50vw;
-    top: 2vh;
-    transform: translateX(-50%);
-    display: grid;
-    grid-template:
-    'bar bar bar bar bar'
-    'seven eight nine divide multiply'
-    'four five six substract add'
-    'one two three clearEntry clear'
-    'invertSign zero dot equal equal';
-    background-color: rgb(26, 26, 26);
+body {
+	background-color: var(--primary-color);
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-#bar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-area: bar;
-    background-color: white;
+button {
+	font-size: 1.5em;
+	margin: 1px;
+	min-width: 2em;
 }
 
-#bar-content{
-    width: 100%;
-    height: 100%;
-    padding: 1vw;
-    margin: 0;
-    font-size: 2vw;
-    color: black;
+#calc {
+	display: grid;
+	grid-template:
+		"bar bar bar bar bar"
+		"seven eight nine divide multiply"
+		"four five six substract add"
+		"one two three clearEntry clear"
+		"invertSign zero dot equal equal";
+	background-color: var(--secondary-color);
+	max-width: 95%;
+	min-height: 50%;
 }
 
-#bar-content:focus{ outline-style: none; }
-
-#zero{ grid-area: zero; }
-#one{ grid-area: one; }
-#two{ grid-area: two; }
-#three{ grid-area: three; }
-#four{ grid-area: four; }
-#five{ grid-area: five; }
-#six{ grid-area: six; }
-#seven{ grid-area: seven; }
-#eight{ grid-area: eight; }
-#nine{ grid-area: nine; }
-
-#divide{ grid-area: divide; }
-#multiply{ grid-area: multiply; }
-#substract{ grid-area: substract; }
-#add{ grid-area: add; }
-
-#dot{ grid-area: dot; }
-#equal{ grid-area: equal; }
-#clear{ grid-area: clear; }
-
-.operator, .number, #bar-content{ 
-    border: 1px solid #111; 
+#bar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	grid-area: bar;
+	background-color: white;
 }
 
-.operator, .number{
-    font-size: 3vw;
+#bar-content {
+	width: 100%;
+	height: 100%;
+	padding: 1em;
+	font-size: 2em;
+	color: black;
+	border: 1px solid #111;
 }
 
-.number{ background-color: rgb(230, 230, 230); }
-.number:hover{ background-color: rgb(181, 211, 247); }
-.number:focus{ outline-style: none; }
-
-.operator{ background-color: rgb(172, 172, 172); }
-.operator:hover{ background-color: rgb(181, 211, 247); }
-.operator:focus{ outline-style: none; }
-
-
-@media (max-width: 800px) {
-    #calc{
-        width: 200px;
-    }
-
-    .number:hover{ background-color: rgb(230, 230, 230); }
-    .operator:hover{ background-color: rgb(172, 172, 172); }
-
-    #bar-content{
-        font-size: 5vw;
-    }
-
-    .operator, .number{
-        font-size: 7vw;
-    }
+#bar-content:focus {
+	outline: none;
+	background-color: var(--focus-color);
 }
 
-@media (min-width: 800px) {
-    #calc{
-        width: 400px;
-    }
+#zero {
+	grid-area: zero;
 }
 
-@media (min-width: 500px) {
-    #calc{
-        width: 450px;
-    }
+#one {
+	grid-area: one;
 }
 
-@media (min-width: 600px) {
-    #calc{
-        width: 500px;
-    }
+#two {
+	grid-area: two;
 }
 
-@media (min-width: 1200px) {
-    #calc{
-        width: 600px;
-    }
+#three {
+	grid-area: three;
 }
 
-@media (max-height: 200px) {
-	#calc{
-		height: 100px;
-	}
+#four {
+	grid-area: four;
 }
 
-@media (min-height: 200px) {
-	#calc{
-		height: 200px;
-	}
+#five {
+	grid-area: five;
 }
 
-
-@media (min-height: 600px) {
-	#calc{
-		height: 400px;
-	}
+#six {
+	grid-area: six;
 }
 
-@media (min-height: 800px) {
-	#calc{
-		height: 550px;
-	}
+#seven {
+	grid-area: seven;
 }
 
-@media (min-height: 1000px) {
-	#calc{
-		height: 600px;
-	}
+#eight {
+	grid-area: eight;
+}
+
+#nine {
+	grid-area: nine;
+}
+
+#divide {
+	grid-area: divide;
+}
+
+#multiply {
+	grid-area: multiply;
+}
+
+#substract {
+	grid-area: substract;
+}
+
+#add {
+	grid-area: add;
+}
+
+#dot {
+	grid-area: dot;
+}
+
+#equal {
+	grid-area: equal;
+}
+
+#clear {
+	grid-area: clear;
+}
+
+#clearEntry {
+	grid-area: clearEntry;
+}
+
+#invertSign {
+	grid-area: invertSign;
 }
